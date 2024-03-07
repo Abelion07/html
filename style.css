@@ -61,8 +61,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     width: 100%;
-    height: 100%;
+    height: 79%;
+    margin-top: 10vh;
 }
 
 .hatso {
@@ -130,4 +132,18 @@ button:active {
 
 button:active {
     scale: 0.9;
+}
+
+@media screen and (max-width: 500px){
+    .bg {
+        height: 75%;
+    }
+
+    .hatso{
+        margin: 10px;
+    }
+
+    #logo1{
+        width: 10vw;
+    }
 }
