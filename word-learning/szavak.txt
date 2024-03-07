@@ -1,0 +1,5 @@
+der Hund - kutya
+die Katze - macska
+das Haus - ház
+der Computer - számítógép
+das Fenster - ablak

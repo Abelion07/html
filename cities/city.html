@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magyarország városai</title>
+    <link rel="shortcut icon" href="https://static-00.iconduck.com/assets.00/empire-icon-2048x2048-nsd149nv.png"
+        type="image/x-icon">
+    <link rel="stylesheet" href="citystyle.css">
+</head>
+
+<body>
+    <div id="fejlec">
+        <table>
+            <tr>
+                <td>
+                    <a href="#">
+                        <img src="https://static-00.iconduck.com/assets.00/empire-icon-2048x2048-nsd149nv.png" alt=""
+                            id="logo">
+                    </a>
+                </td>
+                <td>
+                    <h1 class="MoVárosai">
+                        Magyarország városai
+                    </h1>
+                </td>
+                <td>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1024px-Hamburger_icon_white.svg.png"
+                        id="logo2" onclick="on()">
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="tav"></div>
+    <div id="navbar">
+        <a onclick="off()" id="closebtn">&times;</a>
+        <a href="#">Főmenü</a>
+        <a href="#" onclick="Megjegyzések()">Megjegyzések</a>
+        <p class="foot">Csukás Ábel <br>2024.</p>
+    </div>
+    <div class="bg">
+        <h1 class="MoVárosMobile">
+            Magyarország városai
+        </h1>
+        <div>
+            <input type="text" id="searchbar" onkeypress="talalatok()" onkeyup="talalatok()">
+            <div id="talalatok-cont"></div>
+        </div>
+        <div id="adatokKiir"></div>
+    </div>
+    <script src="citylist.js"></script>
+    <script src="scriptcity.js"></script>
+</body>
+
+</html>

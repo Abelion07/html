@@ -1,0 +1,186 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+#fejlec {
+    width: 100vw;
+    height: 11vh;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+}
+
+#logo,
+#logo2 {
+    height: 7vh;
+    margin-left: 1vh;
+    margin-right: 1vh;
+    cursor: pointer;
+}
+
+#logo {
+    filter: drop-shadow(0px 0px 15px white);
+}
+
+table {
+    width: 100%;
+}
+
+td:nth-child(1) {
+    text-align: left;
+    width: 15%;
+}
+
+td:nth-child(2) {
+    text-align: center;
+}
+
+td:nth-child(3) {
+    text-align: right;
+    width: 15%;
+}
+
+.MoVárosai {
+    font-size: 4vh;
+}
+
+#tav {
+    height: 7vh;
+}
+
+#navbar {
+    background-color: #333;
+    top: 0;
+    right: 0;
+    width: 0;
+    overflow: hidden;
+    position: fixed;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.4s all ease;
+    text-transform: uppercase;
+}
+
+a {
+    color: #6e6e6e;
+    margin: 2vh;
+    font-size: 3vh;
+    text-decoration: none;
+    transition: 0.5s all ease;
+}
+
+a:hover,
+.foot:hover {
+    scale: 1.1;
+    text-shadow: 0 0 10px #6e6e6e,
+        0 0 20px #6e6e6e,
+        0 0 40px #6e6e6e,
+        0 0 80px #6e6e6e;
+    color: white;
+}
+
+#closebtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 4vh;
+    cursor: pointer;
+}
+
+.foot {
+    position: absolute;
+    text-align: right;
+    bottom: 0;
+    right: 0;
+    margin: 2vh;
+    color: #6e6e6e;
+    transition: 0.4s all ease;
+    cursor: default;
+}
+
+#searchbar {
+    height: 50px;
+    width: 400px;
+    border-radius: 20px;
+    border: 3px black solid;
+    text-align: center;
+    font-size: 20px;
+    transition: 0.3s all ease;
+    margin: 1vh;
+}
+
+#searchbar:hover,
+#searchbar:focus {
+    width: 450px;
+}
+
+.bg {
+    margin: 0 auto 0 auto;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.MoVárosMobile {
+    visibility: hidden;
+    overflow: hidden;
+    height: 0;
+    width: 0;
+}
+
+.talalat {
+    margin: 5px;
+    padding: 5px;
+    height: 3vh;
+    transition: .1s all ease;
+}
+
+.talalat:hover {
+    background-color: #6e6e6e;
+    color: white;
+    border-radius: 5px;
+}
+
+p {
+    font-size: 20px;
+    text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+    #searchbar {
+        height: 50px;
+        width: 300px;
+    }
+
+    .MoVárosai {
+        width: 0;
+        height: 0;
+        position: fixed;
+        overflow: hidden;
+        visibility: hidden;
+    }
+
+    .MoVárosMobile {
+        visibility: visible;
+        width: auto;
+        height: auto;
+        margin: 3vh;
+        margin-top: 8vh;
+    }
+
+    #searchbar:hover, #searchbar:focus{
+        width: 300px;
+    }    
+}
