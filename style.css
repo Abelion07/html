@@ -86,8 +86,6 @@ body {
     transition: .5s all ease;
 }
 
-.kep1:hover {}
-
 .kep1 {
     animation: mozog 2s infinite;
     background-image: url(https://gisgeography.com/wp-content/uploads/2017/10/Hungary-Satellite-Map-1-768x499.png);
