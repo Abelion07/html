@@ -71,7 +71,7 @@ body {
     width: 450px;
     height: 300px;
     background-color: white;
-    margin: 30px;
+    margin: 20px;
     border-radius: 20px;
     box-shadow: 5px 5px 10px black;
     display: flex;
@@ -82,7 +82,9 @@ body {
 
 
 .kep1,
-.kep2 {
+.kep2,
+.kep3,
+.kep4 {
     width: 320px;
     height: 190px;
     transition: .5s all ease;
@@ -99,6 +101,13 @@ body {
     background-image: url(https://thatisevil.files.wordpress.com/2014/10/wordle-vocabulary-1p1s4xh.jpg);
     background-size: cover;
     background-position: center;
+}
+
+.kep3 {
+    background-image: url(https://www.thecoderpedia.com/wp-content/uploads/2021/07/HTML-Games-with-Source-Code.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
 }
 
 @keyframes mozog {
@@ -135,8 +144,16 @@ button:active {
 }
 
 @media screen and (max-width: 500px){
+    body {
+        width: 100vw;
+        height: 100vh;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        overflow-x: hidden;
+        overflow-y: visible;
+    }
+
     .bg {
-        height: 75%;
+        height: 100vh;
     }
 
     .hatso{
