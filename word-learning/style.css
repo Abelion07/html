@@ -45,4 +45,27 @@ p{
     scale: 1.1;
 }
 
+#closebtn{
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 30px;
+    margin-top: 20px;
+    font-size: 50px;
+    transition: .5s all ease;
+}
 
+#closebtn:hover{
+    text-shadow: 0 0 10px rgb(201, 201, 201),
+    0 0 20px rgb(201, 201, 201),
+    0 0 4px rgb(201, 201, 201),
+    0 0 80px rgb(201, 201, 201),
+    0 0 160px rgb(201, 201, 201);
+    scale: 1.1;
+}
+
+#closebtn:active{
+    scale: 0.9;
+}
