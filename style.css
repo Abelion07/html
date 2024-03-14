@@ -110,6 +110,13 @@ body {
     border-radius: 5px;
 }
 
+.kep4{
+    background-image: url(https://c4.wallpaperflare.com/wallpaper/707/629/312/military-map-maps-the-great-war-of-1914-wallpaper-preview.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+}
+
 @keyframes mozog {
     0% {
         scale: 1;
