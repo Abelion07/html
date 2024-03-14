@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Történelmi adatbázis</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="menu">
+        <a onclick="off()" id="x">&times;</a>
+        <a href="https://abelion07.github.io/html/">Főmenü</a>
+        <div id="szoveg">
+            <p>©</p>
+            <p id="">
+                Csukás Ábel
+            </p>
+            <p id="">
+                Madar Szabolcs
+            </p>
+            <p id="">2024.</p>
+        </div>
+    </div>
+    <div class="head">
+        <table>
+            <tr>
+                <td id="cella"></td>
+                <td id="cella"><h1>Történelmi adatbázis</h1></td>
+                <td id="cella"><p onclick="on()" id="menubtn">&#9776</p></td>
+            </tr>
+        </table>
+    </div>
+    <div style="height: 6vh;"></div>
+    <div class="bg"> 
+        <input type="text" id="searchbar" onkeypress="talalatok()" onkeyup="talalatok()">
+        <div id="talalatok-cont"></div>
+        <div id="adatokKiir"></div>
+    </div>
+    <div class="bgimage"></div>
+    <script>
+        let menu = document.getElementById("menu")
+        function on(){
+            menu.style.width = "250px"
+        }
+        function off(){
+            
+            menu.style.width = "0px"
+        }
+    </script>
+    <script src="wars.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
