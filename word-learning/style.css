@@ -69,3 +69,11 @@ p{
 #closebtn:active{
     scale: 0.9;
 }
+
+.szamlalo{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    margin: 30px;
+}

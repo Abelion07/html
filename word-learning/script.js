@@ -47,6 +47,7 @@ function checkAnswer() {
             aktkulcs = magyar[aktérték];
             kérdés();
         }
+        szamlalo();
     }
     else {
         //Ha nem jó a válasz
@@ -60,3 +61,11 @@ document.addEventListener("keydown", eventkey => {
         checkAnswer();
     }
 })
+
+function szamlalo() {
+    var mennyibol = document.getElementById("mennyibol");
+    var mennyi = document.getElementById("mennyi");
+    mennyi.innerHTML = magyar.length;
+    mennyibol.innerHTML = aktérték;
+    console.log(aktérték)
+}
