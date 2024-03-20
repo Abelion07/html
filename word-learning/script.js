@@ -43,6 +43,7 @@ function checkAnswer() {
         }
         else {
             //Ha nincs következő sor, akkor újra indul
+            alert("A végére értél! Újrakezdés!")
             aktérték = 0;
             aktkulcs = magyar[aktérték];
             kérdés();
