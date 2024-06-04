@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="darkmode.css">
+</head>
+
+<body>
+    <div class="bg">
+        <div class="menu">
+            <div class="toggle">
+                <input type="checkbox" name="toggle" id="checkbox">
+                <label for="checkbox" class="label"></label>
+            </div>
+        </div>
+
+        <div id="input-container">
+            <input type="text" id="input-1" maxlength="3" oninput="bekérés(this)">
+        </div>
+
+        <h2>DNS/kód:</h2><br>
+        <div id="DNS-output-container">
+            <p id="output-1"></p>
+        </div>
+
+        <h2>mRNS/kodon:</h2><br>
+        <div id="kodon-output-container">
+            <p id="kodonki-1"></p>
+        </div>
+
+        <h2>antikodon:</h2><br>
+        <div id="antikodon-output-container">
+            <p id="antikodonki-1"></p>
+        </div>
+
+        <h2>Aminosav:</h2><br>
+    </div>
+
+    <script src="darkmode.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
