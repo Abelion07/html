@@ -1,0 +1,121 @@
+@media screen and (max-width: 500px) {
+    body {
+        background-color: #efefef;
+        font-family: Arial;
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        place-items: center;
+        user-select: none;
+    }
+
+    .bg {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
+
+    .box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .kor {
+        width: 25vw;
+        height: 12.5vh;
+        border-radius: 100%;
+        border: 10px #efefef solid;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 1s all ease;
+    }
+
+    #kor1 {
+        background-color: #0d69f8;
+    }
+
+    img:hover {
+        transition: .5s all ease;
+        scale: 1.1;
+        cursor: pointer;
+    }
+
+    #kor2 {
+        background-color: #ffc73e;
+    }
+
+    #vonal1 {
+        background: linear-gradient(#efefef, #efefef, #0d69f8);
+        height: 20vh;
+        width: 10vw;
+        position: absolute;
+        z-index: -1;
+        border-radius: 47px;
+    }
+
+    #vonal2 {
+        background-color: #ffc73e;
+        height: 20vh;
+        width: 10vw;
+        position: absolute;
+        z-index: -1;
+        border-radius: 47px;
+    }
+
+    #vonal3 {
+        background: linear-gradient(to top,
+                #efefef, #efefef, #f63e56);
+        height: 20vh;
+        width: 10vw;
+        position: absolute;
+        z-index: -1;
+        border-radius: 47px;
+    }
+
+
+
+    #kor3 {
+        background-color: #f63e56;
+    }
+
+    .hosszabb1 {
+        height: 10vh;
+        width: 5vw;
+        border-radius: 10px;
+        background: linear-gradient(to bottom,
+                #0d69f8, #ffc73e);
+        margin: 0;
+    }
+
+    .hosszabb2 {
+        height: 10vh;
+        width: 5vw;
+        border-radius: 10px;
+        background: linear-gradient(to top,
+                #f63e56, #ffc73e);
+        margin: 0;
+    }
+
+    #kep1,
+    #kep2,
+    #kep3 {
+        width: 10vw;
+    }
+
+    h2 {
+        visibility: hidden;
+    }
+
+    a {
+        color: black;
+        font-weight: none;
+        text-decoration: none;
+    }
+}
