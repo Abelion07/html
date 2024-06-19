@@ -1,20 +1,20 @@
 body {
-    background-color: #efefef;
+    background-color: #fff;
     font-family: Arial;
-    width: 100vw;
-    height: 100vh;
-    display: grid;
-    place-items: center;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     user-select: none;
 }
 
 .bg {
-    width: 100vw;
+    width: 90vw;
     height: 100vh;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    background-color: #fff;
     margin: 0;
 }
 
@@ -29,7 +29,7 @@ body {
     width: 342px;
     height: 342px;
     border-radius: 100%;
-    border: 10px #efefef solid;
+    border: 10px #fff solid;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -52,7 +52,7 @@ img:hover {
 
 #vonal1 {
     background: linear-gradient(to right,
-            #efefef, #efefef, #0d69f8);
+            #fff, #fff, #0d69f8);
     width: 432px;
     height: 96px;
     position: absolute;
@@ -71,7 +71,7 @@ img:hover {
 
 #vonal3 {
     background: linear-gradient(to left,
-            #efefef, #efefef, #f63e56);
+            #fff, #fff, #f63e56);
     width: 432px;
     height: 96px;
     position: absolute;
@@ -120,4 +120,30 @@ a {
     color: black;
     font-weight: none;
     text-decoration: none;
+}
+
+.bg2{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.icon{
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+    background-color: black;
+    border-radius: 2.5rem;
+    display: grid;
+    place-items: center;
+    background-color: #c6c6c6;
+    border-radius: 20px;
+    border: 2px solid black;
+}
+
+#qr{
+    width: 100px;
 }
