@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <style>
+        body {
+            background-color: dodgerblue;
+            font-family: sans-serif;
+            display: grid;
+            place-items: center;
+        }
+
+        .bg {
+            margin: 10vh;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 100px;
+            border-radius: 10px;
+        }
+
+        div{
+            margin: 10px;
+        }
+
+        .range{
+            display: flex;
+            align-items: center;
+        }
+
+        button{
+            width: 150px;
+            height: 50px;
+            background-color: dodgerblue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 0 5px #333;
+            margin: 10px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg">
+        <h1 id="password">Jelszó generátor</h1>
+        <div class="range">
+            <label for="rangeInput">Password Length:</label>
+            <input type="range" id="rangeInput" min="1" max="20" value="12" style="margin: 20px;">
+            <p id="rangeValue">12</p>
+        </div>
+        <div class="btns">
+            <button class="generate" onclick="btnClicked()">Generálás</button>
+            <button id="copy">Másolás</button>
+        </div>
+    </div>
+
+    <script>
+        const rangeInput = document.getElementById("rangeInput");
+        const rangeValue = document.getElementById("rangeValue");
+        const kiir = document.getElementById("password");
+
+        document.addEventListener("input", () => {
+            rangeValue.textContent = rangeInput.value;
+        })
+
+        const characters = [
+            'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
+            'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
+            'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
+            'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
+            '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'
+        ];
+
+        function generatePassword(length) {
+            let password = '';
+            const charactersLength = characters.length;
+            for (let i = 0; i < length; i++) {
+                const randomIndex = Math.floor(Math.random() * charactersLength);
+                password += characters[randomIndex];
+            }
+            return password;
+        }
+
+        let copybtn = document.getElementById("copy");
+        let newpassword = "";
+        function btnClicked() {
+            newpassword = generatePassword(rangeInput.value);
+            kiir.innerHTML = newpassword;
+        }
+
+        copybtn.addEventListener("click", () => {
+            navigator.clipboard.writeText(newpassword);
+        })
+    </script>
+</body>
+
+</html>
