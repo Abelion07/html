@@ -1,3 +1,19 @@
+.x{
+    color: black;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 35px;
+    margin: 30px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.x:hover{
+    text-shadow: #666 0px 0px 10px;
+    transition: .1s all ease;
+}
+
 html {
     box-sizing: border-box;
     height: 100%;
