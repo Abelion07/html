@@ -12,6 +12,6 @@
         "sizes": "192x192"
       }
     ],
-    "start_url": "..QRcode/qr.html",
+    "start_url": "https://abelion07.github.io/html/QRcode/qr.html",
     "display": "fullscreen"
   }
