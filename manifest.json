@@ -1,13 +1,13 @@
 {
-    "name": "My PWA",
+    "name": "Empire",
     "icons": [
       {
-        "src": "icons/madar.png",
+        "src": "icons/logo512.png",
         "type": "image/png",
         "sizes": "512x512"
       }
       ,{
-        "src": "icons/image2.png",
+        "src": "icons/logo192.png",
         "type": "image/png",
         "sizes": "192x192"
       }
