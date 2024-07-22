@@ -2,9 +2,16 @@
     "name": "My PWA",
     "icons": [
       {
-        "src": "icons/512.png",
+        "src": "icons/madar.png",
         "type": "image/png",
         "sizes": "512x512"
       }
-    ]
+      ,{
+        "src": "icons/image2.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      }
+    ],
+    "start_url": "..QRcode/qr.html",
+    "display": "fullscreen"
   }
