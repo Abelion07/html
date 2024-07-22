@@ -5,65 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password Generator</title>
-    <style>
-        body {
-            background-color: dodgerblue;
-            font-family: sans-serif;
-            display: grid;
-            place-items: center;
-        }
-
-        .bg {
-            margin: 10vh;
-            background-color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            padding: 100px;
-            border-radius: 10px;
-        }
-
-        div{
-            margin: 10px;
-        }
-
-        .range{
-            display: flex;
-            align-items: center;
-        }
-
-        button{
-            width: 150px;
-            height: 50px;
-            background-color: dodgerblue;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            box-shadow: 0 0 5px #333;
-            margin: 10px;
-            font-size: 20px;
-        }
-        .x{
-            color: white;
-            position: absolute;
-            top: 0;
-            right: 0;
-            font-size: 35px;
-            margin: 30px;
-            cursor: pointer;
-            text-decoration: none;
-        }
-
-        .x:hover{
-            text-shadow: white 0px 0px 10px;
-            transition: .1s all ease;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <a href="/index.html" class="x">
+    <a href="https://abelion07.github.io/html/" class="x">
         &times;
     </a>
     <div class="bg">
@@ -79,44 +25,7 @@
         </div>
     </div>
 
-    <script>
-        const rangeInput = document.getElementById("rangeInput");
-        const rangeValue = document.getElementById("rangeValue");
-        const kiir = document.getElementById("password");
-
-        document.addEventListener("input", () => {
-            rangeValue.textContent = rangeInput.value;
-        })
-
-        const characters = [
-            'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
-            'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
-            'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
-            'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
-            '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'
-        ];
-
-        function generatePassword(length) {
-            let password = '';
-            const charactersLength = characters.length;
-            for (let i = 0; i < length; i++) {
-                const randomIndex = Math.floor(Math.random() * charactersLength);
-                password += characters[randomIndex];
-            }
-            return password;
-        }
-
-        let copybtn = document.getElementById("copy");
-        let newpassword = "";
-        function btnClicked() {
-            newpassword = generatePassword(rangeInput.value);
-            kiir.innerHTML = newpassword;
-        }
-
-        copybtn.addEventListener("click", () => {
-            navigator.clipboard.writeText(newpassword);
-        })
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
