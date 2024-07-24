@@ -1,0 +1,134 @@
+body {
+    height: 99vh;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-family: sans-serif;
+    background-color: #ffffff;
+    background-image: linear-gradient(315deg, #ffffff 0%, #5899e2 74%);
+    overflow: hidden;
+}
+
+.bg{
+    margin: 10vw;
+    height: 70vh;
+    width: 30vw;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.internal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+label{
+    display: flex; 
+    height: 20px;
+    width: auto;
+    margin: 10px;
+}
+
+.inputs{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+    margin: 20px;
+}
+
+input{
+    height: 20px;
+    width: auto;
+    border-radius: 10px;
+    padding: 5px;
+    border: black 1px solid;
+}
+
+.jelszosor{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+
+#checkbox{
+    width: 15px;
+    height: 15px;
+    font-size: 200px;
+    margin: 10px;
+}
+
+button{
+    background-color: dodgerblue;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+}
+
+#x{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 30px;
+    text-shadow: 0px 0px 10px #5899e2;
+    text-decoration: none;
+    color: #ffffff;
+    margin: 30px;
+}
+
+#negyed{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 20vh;
+    margin: 20px;
+}
+
+@media print{
+    .bg{
+        visibility: hidden;
+    }
+
+    img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        visibility: visible;
+    }
+
+}
+
+
+
+@media screen and (max-width: 500px){
+    body{
+        justify-content: center;
+    }
+
+    .bg{
+        width: 70vw;
+    }
+
+    input{
+        height: 20px;
+    }
+
+    #negyed{
+        display: none;
+    }
+}

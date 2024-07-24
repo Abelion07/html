@@ -5,73 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        form{
-            border: dashed 2px #d1d5db;
-            padding: .5rem 2rem;
-            font: 16px sans-serif;
-        }
-
-        .internal{
-            display: flex;
-            gap: 2rem;
-        }
-
-        .inputs{
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 1rem;
-        }
-
-        label{
-            display: flex;
-            flex-direction: column;
-        }
-
-        input{
-            color: #374151;
-            font-family: monospace;
-            height: 38px;
-            padding: 0 16px;
-            border: 1px solid #d1d5db;
-            border-radius: 0.25rem;
-        }
-
-        button{
-            height: 2.5rem;
-            background-color: #0ea5e9;
-            color: white;
-            border-radius: 0.25rem;
-            border: none;
-            font-size: 1rem;
-        }
-
-        @media print{
-            button{
-                display: none;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <form>
+    <a href="abelion07.github.io/html" id="x">&times;</a>
+    <div class="bg">
         <h2>Wifi Login</h2>
         <div class="internal">
-            <img src="https://api.qrserver.com/v1/create-qr-code/?size=164x164&data=todo" width="164">
 
             <div class="inputs">
                 <label>
-                    Network name
                     <input class="ssid" placeholder="WiFi network name">
                 </label>
-                <label><input class="password" type="password" placeholder="Password"></label>
+                <label><input class="password" type="password" id="myInput" placeholder="Password"></label>
+                <div class="checkbox">
+                    <input type="checkbox" id="checkbox" onclick="myFunction()">
+                    <p>Show password</p>
+                </div>
             </div>
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=164x164&data=todo" width="164">
         </div>
         <button>Print Wifi Card</button>
-    </form>
+        <img src="/icons/empire logo.png" id="negyed">
+    </div>
 
     <script>
         const img = document.querySelector('img');
@@ -79,19 +36,28 @@
         const password = document.querySelector('.password');
         const button = document.querySelector('button');
 
-        function update(){
+        function myFunction() {
+            var x = document.getElementById("myInput");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
+
+
+        function update() {
             const wifi = `WIFI:T:WPA;S:${ssid.value};P:${password.value};;`;
             img.src = `https://api.qrserver.com/v1/create-qr-code/?size/164x164&data=${wifi}`;
         }
 
         ssid.addEventListener('keyup', update,);
-        
+
         password.addEventListener('keyup', update,);
 
         button.addEventListener('click', () => {
             window.print();
         })
-        
     </script>
 </body>
 
