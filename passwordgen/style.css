@@ -6,21 +6,22 @@
     padding: 0;
 }
 
-html{
+html {
     height: 100%;
     box-sizing: border-box;
 }
 
-body{
+body {
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: sans-serif;
-    background-color: #1e90ff;
+    background-color: #f7b42c;
+    background-image: linear-gradient(315deg, #f7b42c 0%, #fc575e 74%);
     height: inherit;
 }
 
-.bg{
+.bg {
     background-color: white;
     padding: 20px;
     width: 50vw;
@@ -31,24 +32,25 @@ body{
     justify-content: center;
     flex-direction: column;
     border-radius: 15px;
+    box-shadow: black 0px 0px 20px;
 }
 
-.range{
+.range {
     display: flex;
     align-items: center;
 }
 
-button{
+button {
     width: 10vw;
     height: 5vh;
     background-color: dodgerblue;
     border-radius: 20px;
     border: none;
     color: white;
-    margin: 0 10px 0 10px ;
+    margin: 0 10px 0 10px;
 }
 
-.x{
+.x {
     top: 0;
     right: 0;
     color: white;
@@ -56,31 +58,31 @@ button{
     transition: 0.5s all ease;
     position: absolute;
     margin: 30px 30px 0 0;
-    text-decoration: none;    
+    text-decoration: none;
 }
 
-.x:hover{
+.x:hover {
     text-shadow: white 0 0 10px;
 }
 
 @media screen and (max-width: 500px) {
-    body{
-        background: linear-gradient(rgb(0, 0, 47), black, rgb(0,0,47));
+    body {
+        background: linear-gradient(rgb(0, 0, 47), black, rgb(0, 0, 47));
     }
 
-    .bg{
+    .bg {
         background-color: transparent;
         color: white;
         width: 100%;
 
     }
 
-    h1{
+    h1 {
         width: 100%;
         text-align: center;
     }
 
-    button{
+    button {
         background-color: darkblue;
         width: 70vw;
         height: 5vh;
@@ -88,7 +90,7 @@ button{
         margin: 10px 0 10px 0;
     }
 
-    .btns{
+    .btns {
         text-align: center;
     }
 }
