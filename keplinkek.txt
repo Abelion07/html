@@ -1,0 +1,7 @@
+<img src="https://cdn-icons-png.flaticon.com/512/203/203050.png" alt="" id="kep1">
+<img src="https://cdn-icons-png.flaticon.com/512/5027/5027435.png" alt="" id="kep2">
+<img src="https://cdn-icons-png.freepik.com/512/2784/2784428.png" alt="" id="kep3">
+<img src="https://cdn.iconscout.com/icon/free/png-256/free-calculator-1859951-1575939.png" alt="">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/QR_icon.svg/1024px-QR_icon.svg.png"
+                            id="qr">
+<img src="https://play-lh.googleusercontent.com/1_Yqavw9mMbBwp42yl88chb2pXYa2IM-rzV34yOkP6onPlMTcEJl2Zp-_HNYyxV14A-w" alt="">
