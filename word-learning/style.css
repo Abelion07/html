@@ -33,7 +33,7 @@ p{
     border: 1px solid white;
     margin: 10px;
     color: white;
-    border-radius: 20px;
+    border-radius: 20px 0 0 20px;
     font-size: 2vh;
     text-align: center;
     background-color: black;
@@ -42,7 +42,7 @@ p{
 
 #bekértszó:focus{
     border: 2px solid white;
-    scale: 1.1;
+    /* scale: 1.1; */
 }
 
 #closebtn{
@@ -76,4 +76,21 @@ p{
     bottom: 0;
     display: flex;
     margin: 30px;
+}
+
+.microphone{
+    height: 5.5vh;
+    width: 5vw;
+    border: 1px solid white;
+    font-size: 2vh;
+    padding: 2px;
+    border-radius: 0 20px 20px 0;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.bg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }

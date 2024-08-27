@@ -70,3 +70,9 @@ function szamlalo() {
     mennyibol.innerHTML = aktérték;
     console.log(aktérték)
 }
+
+function speak() {
+    var text = document.getElementById("bekértszó").value;
+    var utterance = new SpeechSynthesisUtterance(text);
+    speechSynthesis.speak(utterance);
+}
