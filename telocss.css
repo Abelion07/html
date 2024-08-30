@@ -1,161 +1,26 @@
-@media screen and (max-width: 500px){
+@media screen and (max-width: 500px) {
     body{
-        background-color: rgb(53, 77, 195);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        flex-wrap: wrap;
-        font-family: "Open Sans", sans-serif;
-        scroll-behavior: smooth;
-    }
-
-    h1{
-        color: white;
-        margin-top: 5vh;
-    }
-
-    #input{
-        width: 80vw;
-        height: 5vh;
-        background: rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(10px);
-        text-align: center;
-        color: white;
-        border: none;
-        border-radius: 20px;
-        padding: 2vw;
-    }
-
-    ::placeholder{
-        color: white;
-    }
-
-    .menu{
-        width: 100%;
-        height: 10vh;
-        background-color: white;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    h5{
-        color: rgb(53, 77, 195);
-        font-size: 15px;
-    }
-
-    .favorite{
-        width: 100%;
-        height: 30vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    .title{
-        width: 100%;
-    }
-
-    h3{
-        margin: 25px 25px 0 25px;
-        color: white;
-    }
-
-    .item{
-        width: 40vw;
-        height: 20vh;
-        background-color: rgb(244, 244, 244);
-        margin: 10px;
-        border-radius: 15px;
-    }
-
-    .felso{
-        width: 100%;
-        height: 12vh;
-        border-radius: 15px;
-    }
-
-    .also{
-        width: 100%;
-        height: 8vh;
-        border-radius: 15px;
-        /* display: flex; */
-        /* align-items: center; */
-        /* justify-content: center; */
-    }
-
-    .kep1{
-        width: 100%;
-        height: 12vh;
-        border-radius: 15px 15px 0 0;
-    }
-
-    h4{
-        font-size: 17px;
-        margin: 10px 30px 0px 10px;
-    }
-
-    .apps{
-        background-color: rgb(244, 244, 244);
-        width: 86vw;
-        height: 57vh;
-        border-radius: 20px 20px 0 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        flex-wrap: wrap;
-    }
-
-    .app{
-        width: 100%;
-        height: 12vh;
-        border-bottom: 0.5px #999 solid;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-    }
-
-    .kep2{
-        width: 12vw;
-        height: 12vw;
-        background-color: #333;
-        border-radius: 10px;
-        padding: 2vw;
-        margin-left: 3vw;
-    }
-
-    #kep2{
-        width: 100%;
-    }
-
-    .cim{
-        width: 55vw;
-        height: 20vw;
-        display: flex;
-        margin-left: 5px;
-        /* justify-content: center; */
-        align-items: center;
-        /* background-color: aqua; */
-    }
-
-    a{
-        text-decoration: none;
-        color: #3f3f3f;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .nemtelo{
-        display: none;
+        width: auto;
+        height: auto;
     }
     
-    .telo{
-        color: black;
+    .bg{
+        height: auto;
+        margin-top: 10vh;
+        margin-bottom: 25vh;
+    }
+
+    .elsosor,
+    .masodiksor {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box {
+        
+    }
+
+    .icon {
+        width: 100%;
     }
 }
