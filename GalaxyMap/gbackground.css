@@ -1,0 +1,13 @@
+.background{
+    background: url("https://i.pinimg.com/originals/37/45/c3/3745c3e50e0e529a2b4e0c78637e1ce3.jpg");
+    background-position:center;
+    /* background-repeat: no-repeat; */
+    background-size: 100%;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -999;
+    opacity: 0.9;
+}

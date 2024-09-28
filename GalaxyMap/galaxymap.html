@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galaxy Map</title>
+    <link rel="shortcut icon" href="https://static-00.iconduck.com/assets.00/empire-icon-2048x2048-nsd149nv.png"
+        type="image/x-icon">
+    <link rel="stylesheet" href="galaxy.css">
+    <link rel="stylesheet" href="gbackground.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="gmobile.css">
+</head>
+
+<body>
+    <div class="background"></div>
+    <div class="header">
+        <div class="bal">
+            <h1>
+                <a href="https://abelion07.github.io/html/">
+                    <img src="
+                https://seeklogo.com/images/G/Galactic_Empire-logo-7A19A28ABA-seeklogo.com.png
+                " alt="" id="logo">
+                </a>
+            </h1>
+            <h1 id="title">Galaxy Map</h1>
+        </div>
+        <div class="kozep">
+            <a href="map.html">
+                <button class="tomapbtn">Tovább a térképre</button>
+            </a>
+        </div>
+        <div class="jobb">
+            <input type="search" name="search" autocomplete="off" id="searchbox" placeholder="  Search...">
+            <button type="submit" class="searchButton"><i class="fa fa-search"></i></button>
+        </div>
+    </div>
+    <div style="height: 10vh;"></div>
+
+    <div class="bolygolista"></div>
+    <div class="adatokKiir">
+
+        <script src="planets.js"></script>
+        <script src="galaxymap.js"></script>
+</body>
+
+</html>

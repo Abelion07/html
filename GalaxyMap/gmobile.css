@@ -1,0 +1,54 @@
+@media screen and (max-width: 500px){
+    body{
+        overflow-x: hidden;
+        width: 95vw;
+        height: auto;
+    }
+
+    #title {
+        display: none;
+    }
+
+    #searchbox, .searchButton{
+        display: none;
+    }
+
+    .tomapbtn{
+        width: 30vw;
+        font-size: 15px;
+        height: 6vh;
+        margin-right: 5vw;
+        box-shadow: none;
+    }
+    
+    .kozep{
+        width: 66.6%;
+        justify-content: right;
+    }
+
+    .jobb{
+        display: none;
+        width: 0;
+    }
+
+    .bal {
+        width: 33.3%;
+        height: 100%;
+        justify-content: left;
+    }
+
+    .adatok{
+        width: 35vw;
+        height: 5vh;
+        font-size: 15px;
+    }
+
+    .adatokKiirVisible{
+        width: 80vw;
+        height: 45vh;
+    }
+
+    .closebtn{
+        color: white;
+    }
+}
