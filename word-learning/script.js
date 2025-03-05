@@ -11,6 +11,9 @@ document.getElementById('fileInput').addEventListener('change', function () {
         sorok.forEach(line => {
             const [idegen, hazai] = line.trim().split(" - ");
             szotar[hazai] = idegen;
+            if (line.trim() === "") return;
+            const [idegen, hazai] = line.trim().split("-");
+            szotar[hazai.trim()] = idegen.trim();
         });
         magyar = Object.keys(szotar);
         aktkulcs = magyar[aktérték];
