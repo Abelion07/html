@@ -76,3 +76,19 @@ function speak() {
     var utterance = new SpeechSynthesisUtterance(text);
     speechSynthesis.speak(utterance);
 }
+
+function flip() {
+    let szotar2 = {}
+    console.log(szotar, Object.keys(szotar))
+    Object.keys(szotar).forEach(key => {
+        console.log(key, szotar[key])
+        szotar2[szotar[key]] = key;
+    });
+    szotar = szotar2;
+    magyar = Object.keys(szotar);
+
+    aktérték = 0;
+    aktkulcs = magyar[aktérték];
+    kérdés();
+    szamlalo();
+}
