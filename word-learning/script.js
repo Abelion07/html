@@ -9,8 +9,6 @@ document.getElementById('fileInput').addEventListener('change', function () {
     reader.onload = function () {
         const sorok = reader.result.split("\n");
         sorok.forEach(line => {
-            const [idegen, hazai] = line.trim().split(" - ");
-            szotar[hazai] = idegen;
             if (line.trim() === "") return;
             const [idegen, hazai] = line.trim().split("-");
             szotar[hazai.trim()] = idegen.trim();
@@ -18,6 +16,7 @@ document.getElementById('fileInput').addEventListener('change', function () {
         magyar = Object.keys(szotar);
         aktkulcs = magyar[aktérték];
         kérdés();
+        szamlalo();
     };
     reader.readAsText(this.files[0]);
 });
