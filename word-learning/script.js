@@ -78,10 +78,9 @@ function speak() {
 }
 
 function flip() {
+    if (Object.keys(szotar).length === 0 || magyar === 0) { alert("Nincs szó betöltve!"); return; }
     let szotar2 = {}
-    console.log(szotar, Object.keys(szotar))
     Object.keys(szotar).forEach(key => {
-        console.log(key, szotar[key])
         szotar2[szotar[key]] = key;
     });
     szotar = szotar2;
