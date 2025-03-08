@@ -45,32 +45,42 @@ p{
     /* scale: 1.1; */
 }
 
-#closebtn{
+#menu {
     color: white;
-    text-decoration: none;
-    position: absolute;
     top: 0;
     right: 0;
     margin-right: 30px;
     margin-top: 20px;
     font-size: 50px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
     transition: .5s all ease;
 }
 
-#closebtn:hover{
+a:hover {
     text-shadow: 0 0 10px rgb(201, 201, 201),
     0 0 20px rgb(201, 201, 201),
     0 0 4px rgb(201, 201, 201),
     0 0 80px rgb(201, 201, 201),
     0 0 160px rgb(201, 201, 201);
     scale: 1.1;
+    cursor: pointer;
 }
 
-#closebtn:active{
+a:active {
     scale: 0.9;
 }
 
-.szamlalo{
+#flipbtn {
+    font-size: 70%;
+}
+
+.szamlalo {
     position: absolute;
     right: 0;
     bottom: 0;
