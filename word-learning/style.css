@@ -57,12 +57,16 @@ p{
     flex-direction: column;
 }
 
+#closebtn{
+    color: white;
+}
+
 a {
     text-decoration: none;
     transition: .5s all ease;
 }
 
-a:hover {
+a:hover, #closebtn:hover {
     text-shadow: 0 0 10px rgb(201, 201, 201),
     0 0 20px rgb(201, 201, 201),
     0 0 4px rgb(201, 201, 201),
@@ -72,7 +76,7 @@ a:hover {
     cursor: pointer;
 }
 
-a:active {
+a:active, #closebtn:hover {
     scale: 0.9;
 }
 
