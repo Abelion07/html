@@ -2,6 +2,7 @@
     body{
         width: auto;
         height: auto;
+        background: linear-gradient(to bottom right, rgb(22,35,63), rgb(92, 50, 57), rgb(162,65,52));
     }
     
     .bg{
@@ -17,10 +18,11 @@
     }
 
     .box {
-        
+        margin: 30px;
     }
-
+    
     .icon {
+        height: 300px;
         width: 100%;
     }
 }

@@ -4,7 +4,8 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: white;
+    /* background-color: white; */
+    background: linear-gradient(to bottom right, rgb(22,35,63), rgb(92, 50, 57), rgb(162,65,52));
 }
 
 .bg {
@@ -32,14 +33,26 @@ body {
     flex-direction: column;
 }
 
-.icon{
+/* .icon{
     border-radius: 20px;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.25);
     box-shadow: 0 0 10px rgb(235,235,235) ;
     width: 150px;
     height: 150px;
     display: grid;
     place-items: center;
+} */
+
+.icon {
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.2); /* Átlátszóbb háttér */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Finom árnyék */
+    width: 150px;
+    height: 150px;
+    display: grid;
+    place-items: center;
+    backdrop-filter: blur(5px); /* Üvegszerű hatás */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Finom keret */
 }
 
 img{
@@ -54,6 +67,7 @@ img:hover{
 
 h1{
     font-size: 20px;
+    color: rgba(255, 255, 255, 0.9);
 }
 
 a{
