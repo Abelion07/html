@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Időjárás Jelentés</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="weather-container">
+        <div class="left-panel">
+            <div class="weather-icon">
+                <h1>⛅ Időjárás</h1>
+            </div>
+            <div class="foszoveg">
+                <h1 class="hőmérséklet"></h1>
+                <h2 class="nap"></h2>
+            </div>
+            <div class="mellekszoveg">
+                <p class="dátum"></p>
+                <p class="esovaloszinuseg"></p>
+                <p>📍 Hajdúböszörmény, EU/HU</p>
+            </div>
+        </div>
+        <div class="right-panel">
+            <div class="week-forecast">
+                <div class="day"></div>
+                <div class="day"></div>
+                <div class="day"></div>
+                <div class="day"></div>
+                <div class="day"></div>
+                <div class="day"></div>
+            </div>
+            <div class="highlights">
+                <div class="highlight"><h2>Mai napon</h2></div>
+                <div class="highlight osszhom"></div>
+                <div class="highlight szelsebesseg">💨 Szélsebesség:</div>
+                <div class="highlight paratartalom">💧 Páratartalom:</div>
+                <div class="highlight napkelte"></div>
+                <div class="highlight napnyugta"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="weatherdata.js"></script>
+</body>
+
+</html>
