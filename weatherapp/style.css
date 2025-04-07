@@ -9,6 +9,7 @@ body {
   height: 100vh;
   user-select: none;
   cursor: default;
+  overflow: hidden;
 }
 
 h2 {
@@ -119,4 +120,54 @@ h2 {
 
 .mellekszoveg {
   margin: 0;
+}
+
+@media (max-width: 500px) {
+  body{
+    display: flex;
+    align-items: start;
+  }
+
+  .weather-container{
+    margin-top: 40px;
+  }
+  .right-panel {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    overflow-y: auto; /* Görgethetőség hozzáadása */
+    max-height: 70vh; /* A doboz magasságának korlátozása */
+    overflow-x: hidden;
+  }
+
+  .week-forecast {
+    border: none;
+    overflow-y: auto; 
+    max-height: 100%;
+  }
+
+  .day {
+    width: 22vw;
+    height: 15vh;
+  }
+
+  .highlights {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .highlight{
+    width: 30vw;
+    margin: 5px;
+    height: 10vh;
+    padding: 0;
+  }
+
+  .highlight>h2{
+    font-size: 15px;
+  }
 }
