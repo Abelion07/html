@@ -208,6 +208,30 @@ body {
       rgb(162, 65, 52)
     );
   }
+
+  .description {
+    opacity: 1;
+    transition: 1s all ease;
+    width: 200px;
+    text-align: center;
+  }
+
+  .app-name::after {
+    content: "";
+    background: linear-gradient(to right, #ff6b6b, #4ecdc4);
+    height: 2px;
+    width: 200px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.5s ease;
+    z-index: 1;
+  }
+
+  .splash{
+    overflow: hidden;
+  }
 }
 
 .splash {

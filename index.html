@@ -95,22 +95,15 @@
         });
     </script>
     <script>
-        if (!localStorage.getItem('splashShown')) {
-            const splash = document.querySelector('.splash');
-            splash.classList.remove('fade-out');
+        setTimeout(() => {
+          const splash = document.querySelector('.splash');
+          splash.classList.add('fade-out');
     
-            setTimeout(() => {
-                splash.classList.add('fade-out');
-    
-                setTimeout(() => {
-                    splash.style.display = 'none';
-                    localStorage.setItem('splashShown', 'true');
-                }, 1000);
-            }, 3000);
-        } else {
-            const splash = document.querySelector('.splash');
+          setTimeout(() => {
             splash.style.display = 'none';
-        }
+          }, 1000);
+        }, 3000);
+      
     </script>
 </body>
 
