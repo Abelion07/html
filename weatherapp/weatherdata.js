@@ -41,12 +41,6 @@ function adatfeltoltes(data) {
   const dailySunrise = data.daily.sunrise;
   const dailySunset = data.daily.sunset;
 
-  // Egyéb metaadatok
-  const latitude = data.latitude;
-  const longitude = data.longitude;
-  const timezone = data.timezone;
-  const elevation = data.elevation;
-
   document.querySelector(".hőmérséklet").innerText = `${currentTemperature}°C`;
   document.querySelector(
     ".dátum"

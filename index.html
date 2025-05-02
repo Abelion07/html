@@ -6,99 +6,111 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>index.html</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="telocss.css">
-    <link rel="shortcut icon" href="https://static-00.iconduck.com/assets.00/empire-icon-2048x2048-nsd149nv.png"
-        type="image/x-icon">
-    <link rel="manifest" href="manifest.json">
 </head>
 
 <body>
-    <div class="bg">
-        <div class="elsosor">
-            <div class="box">
-                <div class="icon">
-                    <a href="cities/city.html">
-                        <img src="icons/mapicon.png" alt="icon" id="kep1">
-                    </a>
-                </div>
-                <a href="cities/city.html">
-                    <h1>Magyarország városai</h1>
-                </a>
+    <div class="splash">
+        <img src="icons/logo.png" alt="logo.png">
+    </div>
+    <div class="container">
+        <div class="app-card">
+            <div class="app-icon">
+                <img class="app-icon-img" alt="icon">
             </div>
-            <div class="box">
-                <div class="icon">
-                    <a href="word-learning/index.html">
-                        <img src="icons/dictionaryicon.png" alt="icon" id="kep2">
-                    </a>
-                </div>
-                <a href="word-learning/index.html">
-                    <h1>Word-learning</h1>
-                </a>
-            </div>
-            <div class="box">
-                <div class="icon">
-                    <a href="GalaxyMap/galaxymap.html">
-                        <img src="icons/galaxyicon.png" alt="icon" id="kep2">
-                    </a>
-                </div>
-                <a href="GalaxyMap/galaxymap.html">
-                    <h1>Galaxy Map</h1>
-                </a>
-            </div>
-            <div class="box">
-                <div class="icon">
-                    <a href="weatherapp/weather.html">
-                        <img src="icons/weather.png" alt="icon" id="kep2">
-                    </a>
-                </div>
-                <a href="weatherapp/weather.html">
-                    <h1>Weather app</h1>
-                </a>
-            </div>
+            <h1 class="app-name">App neve</h1>
+            <p class="description">Lorem ipsum dolor</p>
         </div>
-        <div class="masodiksor">
-            <div class="box">
-                <div class="icon">
-                    <a href="calculator/calculator.html">
-                        <img src="icons/calcicon.png" alt="icon">
-                    </a>
-                </div>
-                <a href="calculator/calculator.html">
-                    <h1>Számológép</h1>
-                </a>
+        <div class="app-card">
+            <div class="app-icon">
+                <img class="app-icon-img" alt="icon">
             </div>
-            <div class="box">
-                <div class="icon">
-                    <a href="QRcode/qr.html">
-                        <img src="icons/qricon.png" id="qr">
-                    </a>
-                </div>
-                <a href="QRcode/qr.html">
-                    <h1>QR code</h1>
-                </a>
+            <h1 class="app-name">App neve</h1>
+            <p class="description">Lorem ipsum dolor</p>
+        </div>
+        <div class="app-card">
+            <div class="app-icon">
+                <img class="app-icon-img" alt="icon">
             </div>
-            <div class="box">
-                <div class="icon">
-                    <a href="passwordgen/jelszo.html">
-                        <img src="icons/passgenicon.png" alt="icon">
-                    </a>
-                </div>
-                <a href="passwordgen/jelszo.html">
-                    <h1>Jelszó generátor</h1>
-                </a>
+            <h1 class="app-name">App neve</h1>
+            <p class="description">Lorem ipsum dolor</p>
+        </div>
+        <div class="app-card">
+            <div class="app-icon">
+                <img class="app-icon-img" alt="icon">
             </div>
-            <div class="box">
-                <div class="icon"></div>
-                <a href="">
-                    <h1 style="color: transparent;">.</h1>
-                </a>
+            <h1 class="app-name">App neve</h1>
+            <p class="description">Lorem ipsum dolor</p>
+        </div>
+        <div class="app-card">
+            <div class="app-icon">
+                <img class="app-icon-img" alt="icon">
             </div>
-
-
-
+            <h1 class="app-name">App neve</h1>
+            <p class="description">Lorem ipsum dolor</p>
+        </div>
+        <div class="app-card">
+            <div class="app-icon">
+                <img class="app-icon-img" alt="icon">
+            </div>
+            <h1 class="app-name">App neve</h1>
+            <p class="description">Lorem ipsum dolor</p>
+        </div>
+        <div class="app-card">
+            <div class="app-icon">
+                <img class="app-icon-img" alt="icon">
+            </div>
+            <h1 class="app-name">App neve</h1>
+            <p class="description">Lorem ipsum dolor</p>
+        </div>
+        <div class="app-card">
+            <div class="app-icon">
+                <img class="app-icon-img" alt="icon">
+            </div>
+            <h1 class="app-name">App neve</h1>
+            <p class="description">Lorem ipsum dolor</p>
         </div>
     </div>
-</body>
 
+
+    <script src="szoveg.js"></script>
+    <script>
+        const appcards = document.querySelectorAll(".app-card");
+        appcards.forEach((card, index) => {
+            card.addEventListener("click", () => {
+                location.href = szovegek[index].url
+            })
+        });
+        const appnames = document.querySelectorAll(".app-name");
+        appnames.forEach((name, index) => {
+            name.innerHTML = szovegek[index].name;
+        });
+        const descriptions = document.querySelectorAll(".description");
+        descriptions.forEach((e, i) => {
+            e.innerHTML = szovegek[i].description;
+        });
+        const icons = document.querySelectorAll(".app-icon-img");
+        icons.forEach((icon, index) => {
+            icon.src = `icons/${szovegek[index].icon}`
+        });
+    </script>
+    <script>
+        if (!localStorage.getItem('splashShown')) {
+            const splash = document.querySelector('.splash');
+            splash.classList.remove('fade-out');
+    
+            setTimeout(() => {
+                splash.classList.add('fade-out');
+    
+                setTimeout(() => {
+                    splash.style.display = 'none';
+                    localStorage.setItem('splashShown', 'true');
+                }, 1000);
+            }, 3000);
+        } else {
+            const splash = document.querySelector('.splash');
+            splash.style.display = 'none';
+        }
+    </script>
+</body>
 
 </html>
