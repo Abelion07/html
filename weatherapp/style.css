@@ -112,6 +112,13 @@ h2 {
   font-weight: normal;
 }
 
+.foszoveg{
+  display: flex;
+  align-items: center;
+  /* justify-content: center ; */
+  flex-direction: column;
+}
+
 .foszoveg,
 .mellekszoveg {
   width: 80%;
@@ -141,23 +148,36 @@ h2 {
     overflow-y: auto; /* Görgethetőség hozzáadása */
     max-height: 70vh; /* A doboz magasságának korlátozása */
     overflow-x: hidden;
+    padding: 20px 0 20px 0;
   }
 
-  .week-forecast {
+  .highlights {
     border: none;
     overflow-y: auto; 
     max-height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 0;
   }
 
-  .day {
+  .highlight {
     width: 22vw;
     height: 15vh;
+    margin: 10px 0 10px 0;
+    padding: 0 10px 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }
 
-  .highlights {
+  .highlight:nth-child(1){
+    display: none;
+    opacity: 1;
+  }
+
+  .week-forecast {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -166,7 +186,7 @@ h2 {
     justify-content: center;
   }
 
-  .highlight{
+  .day{
     width: 30vw;
     margin: 5px;
     height: 10vh;

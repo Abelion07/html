@@ -61,14 +61,14 @@ function adatfeltoltes(data) {
 
       day.innerHTML = `
                 <p><b>${dayName}:</b> ${getWeatherIcon(weathertype).icon} ${getWeatherIcon(weathertype).description}</p>
-                <p>🌡️ ${maxTemp}° ➡️ ${minTemp}°</p>
+                <p>🌡️ ${minTemp}° ➡️ ${maxTemp}°</p>
             `;
     }
   });
 
   document.querySelector(".osszhom").innerHTML = `
     <p><b>Mai hőmérséklet</b></p>
-    <p>🌡️ ${dailyMaxTemperature[0]}° ➡️ ${dailyMinTemperature[0]}°</p>`;
+    <p>🌡️ ${dailyMinTemperature[0]}° ➡️ ${dailyMaxTemperature[0]}°</p>`;
   document.querySelector(
     ".szelsebesseg"
   ).innerText += ` ${currentWindSpeed}km/h`;
