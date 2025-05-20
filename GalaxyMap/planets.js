@@ -136,7 +136,7 @@ let planets = [
     "System": "Chandrila-rendszer",
     "Inhabitants": "Ember",
     "Capital_City": "Hanna város",
-    "Grid_Coordinates": "J-20",
+    "Grid_Coordinates": "L-9",
     "Coordinates": [82, 409]
   },
   {
