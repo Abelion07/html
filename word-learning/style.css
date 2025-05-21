@@ -108,3 +108,13 @@ a:active, #closebtn:hover {
     align-items: center;
     flex-direction: column;
 }
+
+@media screen and (max-width: 500px) {
+    #bekértszó{
+        width: 70vw;
+    }
+
+    .microphone{
+        width: 15vw;
+    }
+}
