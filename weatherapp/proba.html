@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        console.log("Hello World");
+        let APIkey = "e1e12f336e194e46ec1911642739d075"
+        let varos = "Hajdúböszörmény"
+        let coordinates = [];
+        function getcoordinates(APIkey, varos) {
+            return fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${varos}&limit=2&appid=${APIkey}`)
+                .then(r => r.json())
+                .then((data) => {
+                    return [data[0].lat, data[0].lon];
+                });
+        }
+
+        getcoordinates(APIkey, varos).then(coords => {
+            console.log(coords)
+        })
+
+    </script>
+</body>
+
+</html>

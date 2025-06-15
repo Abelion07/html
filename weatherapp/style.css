@@ -1,6 +1,8 @@
 body {
   font-family: Arial, sans-serif;
-  background: rgb(214, 215, 219);
+  /* background: rgb(214, 215, 219); */
+  background: url(wallpaper.jpg) center center fixed;
+  background-size: cover;
   margin: 0;
   padding: 0;
   display: flex;
@@ -12,17 +14,41 @@ body {
   overflow: hidden;
 }
 
+#textbox {
+  width: 20vw;
+  height: 5vh;
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(20px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-size: 15px;
+  margin: 15px;
+}
+
+.Keresett{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20vw;
+  flex-wrap: wrap;
+}
+
 h2 {
   margin: 0;
 }
 
 .weather-container {
   display: flex;
-  background-color: rgb(247, 246, 249);
+  /* background: rgb(247, 246, 249, 0.1); */
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(20px);
   border-radius: 15px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  /* border: 1px solid rgba(255, 255, 255, 0.2); */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
   width: 90vw;
-  height: 70vh;
+  height: 80vh;
   align-items: center;
 }
 
@@ -35,7 +61,11 @@ h2 {
 .left-panel {
   flex: 1;
   text-align: start;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.5);
+  height: 80vh;
+  padding: 0;
+  margin: 0;
+  backdrop-filter: blur(10px);
   width: 100%;
   border-radius: 15px 0 0 15px;
   display: flex;
@@ -46,7 +76,8 @@ h2 {
 
 .right-panel {
   border-radius: 0 15px 15px 0;
-  background-color: rgb(247, 246, 249);
+  /* background-color: rgb(247, 246, 249); */
+  /* background-color: rgba(255, 255, 255, 0.2); */
   flex: 3;
   display: flex;
   justify-content: center;
@@ -98,7 +129,6 @@ h2 {
   padding: 15px;
   border-radius: 15px;
   text-align: center;
-  
 }
 
 .hőmérséklet {
@@ -112,7 +142,7 @@ h2 {
   font-weight: normal;
 }
 
-.foszoveg{
+.foszoveg {
   display: flex;
   align-items: center;
   /* justify-content: center ; */
@@ -131,29 +161,22 @@ h2 {
 }
 
 @media (max-width: 500px) {
-  body{
+  body {
     display: flex;
     align-items: start;
   }
 
-  .weather-container{
+  .weather-container {
     margin-top: 40px;
+    height: 70vh;
   }
-  .right-panel {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    flex-direction: column;
-    overflow-y: auto; /* Görgethetőség hozzáadása */
-    max-height: 70vh; /* A doboz magasságának korlátozása */
-    overflow-x: hidden;
-    padding: 20px 0 20px 0;
+  .left-panel {
+    height: 70vh;
   }
 
   .highlights {
     border: none;
-    overflow-y: auto; 
+    overflow-y: auto;
     max-height: 100%;
     display: flex;
     align-items: center;
@@ -172,28 +195,57 @@ h2 {
     flex-direction: column;
   }
 
-  .highlight:nth-child(1){
+  .highlight:nth-child(1) {
     display: none;
     opacity: 1;
+  }
+
+  .day {
+    width: 27vw;
+    margin: 5px;
+    height: 10vh;
+    padding: 0;
+    font-size: 15px;
+  }
+
+  .highlight > h2 {
+    font-size: 15px;
   }
 
   .week-forecast {
     position: fixed;
     bottom: 0;
     left: 0;
+    height: 10vh;
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-
-  .day{
-    width: 30vw;
-    margin: 5px;
-    height: 10vh;
+    flex-wrap: wrap;
+    margin: 0;
     padding: 0;
+    top: 100%;
+    margin-top: 10px;
   }
 
-  .highlight>h2{
+  .left-panel {
+    padding: 0 20px 0 20px;
+    align-items: center;
+    margin-right: 20px;
+  }
+
+  #textbox {
+    width: 35vw;
+    height: 5vh;
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(20px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
     font-size: 15px;
+  }
+
+  .Keresett{
+    margin: 0 auto 0 auto;
   }
 }

@@ -1,24 +1,62 @@
-fetch(
-  "https://api.open-meteo.com/v1/forecast?latitude=47.6667&longitude=21.5167&daily=temperature_2m_max,temperature_2m_min,sunrise,sunset&current=temperature_2m,rain,relative_humidity_2m,wind_speed_10m&timezone=auto&daily=weather_code&current=weather_code"
-)
-  .then((resposne) => resposne.json())
-  .then((data) => {
-    adatfeltoltes(data);
+let APIkey = "e1e12f336e194e46ec1911642739d075";
+let defaultCity = "Hajdúböszörmény";
+let varos = "";
+let orszag = "";
+
+function loadCityWeather(cityName) {
+  getcoordinates(APIkey, cityName).then((coords) => {
+    const lat = coords[0];
+    const lon = coords[1];
+    varos = `${coords[2]}`;
+    orszag = `${coords[3]}`;
+    adatlekeres(lat, lon);
+  }).catch(err => {
+    console.error("Hiba a város betöltésekor:", err);
+    alert("Nem sikerült lekérdezni az időjárást ehhez a városhoz.");
   });
+}
+
+window.addEventListener("load", () => {
+  loadCityWeather(defaultCity);
+});
+
+const kereses = document.getElementById("textbox");
+kereses.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    const keresettVaros = kereses.value.trim();
+    if (keresettVaros) {
+      loadCityWeather(keresettVaros);
+    }
+  }
+});
+
+
+function getcoordinates(APIkey, varos) {
+  return fetch(
+    `http://api.openweathermap.org/geo/1.0/direct?q=${varos}&limit=2&appid=${APIkey}`
+  )
+    .then((r) => r.json())
+    .then((data) => {
+      return [data[0].lat, data[0].lon, data[0].name, data[0].country];
+    });
+}
+
+function adatlekeres(lat, lon) {
+  fetch(
+    `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&daily=temperature_2m_max,temperature_2m_min,sunrise,sunset&current=temperature_2m,rain,relative_humidity_2m,wind_speed_10m&timezone=auto&daily=weather_code&current=weather_code`
+  )
+    .then((resposne) => resposne.json())
+    .then((data) => {
+      adatfeltoltes(data);
+      console.log(data);
+    });
+}
 
 function melyiknap(datum) {
   const date = new Date(datum);
 
   // Napok nevei
-  const daysOfWeek = [
-    "Vas",
-    "H",
-    "Ke",
-    "Szer",
-    "Csüt",
-    "Pén",
-    "Szo",
-  ];
+  const daysOfWeek = ["Vas", "H", "Ke", "Szer", "Csüt", "Pén", "Szo"];
 
   const dayName = daysOfWeek[date.getDay()];
 
@@ -47,9 +85,12 @@ function adatfeltoltes(data) {
   ).innerText = `📆 Ma: ${currentDate} ${currentTime}`;
   document.querySelector(
     ".esovaloszinuseg"
-  ).innerText += `🌧️ Csapadék: ${currentRain}%`;
+  ).innerText = `🌧️ Csapadék: ${currentRain}%`;
   document.querySelector(".nap").innerText = melyiknap(currentDate);
-  document.querySelector(".maiidojaras").innerHTML = `${getWeatherIcon(data.daily.weather_code[0]).icon} ${getWeatherIcon(data.daily.weather_code[0]).description}`;
+  document.querySelector(".maiidojaras").innerHTML = `${
+    getWeatherIcon(data.daily.weather_code[0]).icon
+  } ${getWeatherIcon(data.daily.weather_code[0]).description}`;
+  document.querySelector(".varos").innerHTML = `📍 ${varos}, ${orszag}`;
 
   const days = document.querySelectorAll(".day");
   days.forEach((day, index) => {
@@ -60,7 +101,9 @@ function adatfeltoltes(data) {
       const minTemp = dailyMinTemperature[index + 1];
 
       day.innerHTML = `
-                <p><b>${dayName}:</b> ${getWeatherIcon(weathertype).icon} ${getWeatherIcon(weathertype).description}</p>
+                <p><b>${dayName}:</b> ${getWeatherIcon(weathertype).icon} ${
+        getWeatherIcon(weathertype).description
+      }</p>
                 <p>🌡️ ${minTemp}° ➡️ ${maxTemp}°</p>
             `;
     }
@@ -71,8 +114,10 @@ function adatfeltoltes(data) {
     <p>🌡️ ${dailyMinTemperature[0]}° ➡️ ${dailyMaxTemperature[0]}°</p>`;
   document.querySelector(
     ".szelsebesseg"
-  ).innerText += ` ${currentWindSpeed}km/h`;
-  document.querySelector(".paratartalom").innerText += ` ${currentHumidity}%`;
+  ).innerText = `💨 Szélsebesség: ${currentWindSpeed}km/h`;
+  document.querySelector(
+    ".paratartalom"
+  ).innerText = `💧 Páratartalom: ${currentHumidity}%`;
   document.querySelector(".napkelte").innerText = `🌅 Napfelkelte: ${
     dailySunrise[0].split("T")[1]
   }`;
