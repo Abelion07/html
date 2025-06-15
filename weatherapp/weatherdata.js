@@ -4,20 +4,24 @@ let varos = "";
 let orszag = "";
 
 function loadCityWeather(cityName) {
-  getcoordinates(APIkey, cityName).then((coords) => {
-    const lat = coords[0];
-    const lon = coords[1];
-    varos = `${coords[2]}`;
-    orszag = `${coords[3]}`;
-    adatlekeres(lat, lon);
-  }).catch(err => {
-    console.error("Hiba a város betöltésekor:", err);
-    alert("Nem sikerült lekérdezni az időjárást ehhez a városhoz.");
-  });
+  getcoordinates(APIkey, cityName)
+    .then((coords) => {
+      const lat = coords[0];
+      const lon = coords[1];
+      varos = `${coords[2]}`;
+      orszag = `${coords[3]}`;
+      adatlekeres(lat, lon);
+    })
+    .catch((err) => {
+      console.error("Hiba a város betöltésekor:", err);
+      alert("Nem sikerült lekérdezni az időjárást ehhez a városhoz.");
+    });
 }
 
-window.addEventListener("load", () => {
-  loadCityWeather(defaultCity);
+document.addEventListener("DOMContentLoaded", () => {
+  window.addEventListener("load", () => {
+    loadCityWeather(defaultCity);
+  });
 });
 
 const kereses = document.getElementById("textbox");
@@ -29,7 +33,6 @@ kereses.addEventListener("keydown", (e) => {
     }
   }
 });
-
 
 function getcoordinates(APIkey, varos) {
   return fetch(
