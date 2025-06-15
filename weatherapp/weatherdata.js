@@ -36,7 +36,7 @@ kereses.addEventListener("keydown", (e) => {
 
 function getcoordinates(APIkey, varos) {
   return fetch(
-    `http://api.openweathermap.org/geo/1.0/direct?q=${varos}&limit=2&appid=${APIkey}`
+    `https://api.openweathermap.org/geo/1.0/direct?q=${varos}&limit=2&appid=${APIkey}`
   )
     .then((r) => r.json())
     .then((data) => {
