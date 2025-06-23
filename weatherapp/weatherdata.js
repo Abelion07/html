@@ -46,7 +46,7 @@ function getcoordinates(APIkey, varos) {
 
 function adatlekeres(lat, lon) {
   fetch(
-    `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&daily=temperature_2m_max,temperature_2m_min,sunrise,sunset&current=temperature_2m,rain,relative_humidity_2m,wind_speed_10m&timezone=auto&daily=weather_code&current=weather_code`
+    `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&daily=temperature_2m_max,temperature_2m_min,sunrise,sunset&current=temperature_2m,rain,relative_humidity_2m,wind_speed_10m&timezone=auto&daily=weather_code&current=weather_code&current=surface_pressure&current=pressure_msl,is_day`
   )
     .then((resposne) => resposne.json())
     .then((data) => {
@@ -74,6 +74,7 @@ function adatfeltoltes(data) {
   const currentRain = data.current.rain;
   const currentHumidity = data.current.relative_humidity_2m;
   const currentWindSpeed = data.current.wind_speed_10m;
+  const currentPressure = data.current.pressure_msl;
 
   // Napi adatok
   const dailyTime = data.daily.time;
@@ -121,6 +122,9 @@ function adatfeltoltes(data) {
   document.querySelector(
     ".paratartalom"
   ).innerText = `💧 Páratartalom: ${currentHumidity}%`;
+  document.querySelector(".légnyomás").innerText = `⏲ Légnyomás: ${
+    currentPressure
+  } hPa`;
   document.querySelector(".napkelte").innerText = `🌅 Napfelkelte: ${
     dailySunrise[0].split("T")[1]
   }`;
