@@ -75,6 +75,7 @@ function adatfeltoltes(data) {
   const currentHumidity = data.current.relative_humidity_2m;
   const currentWindSpeed = data.current.wind_speed_10m;
   const currentPressure = data.current.pressure_msl;
+  const nappale = data.current.is_day;
 
   // Napi adatok
   const dailyTime = data.daily.time;
@@ -122,15 +123,20 @@ function adatfeltoltes(data) {
   document.querySelector(
     ".paratartalom"
   ).innerText = `💧 Páratartalom: ${currentHumidity}%`;
-  document.querySelector(".légnyomás").innerText = `⏲ Légnyomás: ${
-    currentPressure
-  } hPa`;
+  document.querySelector(
+    ".légnyomás"
+  ).innerText = `⏲ Légnyomás: ${currentPressure} hPa`;
   document.querySelector(".napkelte").innerText = `🌅 Napfelkelte: ${
     dailySunrise[0].split("T")[1]
   }`;
   document.querySelector(".napnyugta").innerText = `🌄 Napnyugta: ${
     dailySunset[0].split("T")[1]
   }`;
+  if (nappale == 1) {
+    document.querySelector(".nappalvane").innerText = `☀️ ${currentTime}`;
+  }else{
+    document.querySelector(".nappalvane").innerText = `🌙 ${currentTime}`;
+  }
 }
 
 function getWeatherIcon(weatherCode) {
