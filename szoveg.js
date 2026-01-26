@@ -41,5 +41,10 @@ let szovegek = [
     icon: "passgenicon.png",
     url: "passwordgen/jelszo.html",
   },
-  { name: "Új alkalmazás", description: "Hamarosan...", icon: "logo.png" },
+  {
+    name: "Mozi Lista",
+    description: "Fedezd fel a legjobb filmeket",
+    icon: "mozi.png",
+    url: "MoziLista/index.html",
+  },
 ];
